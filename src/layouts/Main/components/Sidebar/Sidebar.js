@@ -12,7 +12,8 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import SettingsIcon from '@material-ui/icons/Settings';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 
-import { Profile, SidebarNav, UpgradePlan } from './components';
+// import { Profile, SidebarNav, UpgradePlan } from './components';
+import { Profile, SidebarNav} from './components';
 
 const useStyles = makeStyles(theme => ({
   drawer: {
@@ -49,30 +50,30 @@ const Sidebar = props => {
       icon: <DashboardIcon />
     },
     {
-      title: 'Users',
+      title: 'Lawyers Management',
       href: '/users',
       icon: <PeopleIcon />
     },
     {
-      title: 'Products',
+      title: 'Booking Management',
       href: '/products',
       icon: <ShoppingBasketIcon />
     },
-    {
-      title: 'Authentication',
-      href: '/sign-in',
-      icon: <LockOpenIcon />
-    },
-    {
-      title: 'Typography',
-      href: '/typography',
-      icon: <TextFieldsIcon />
-    },
-    {
-      title: 'Icons',
-      href: '/icons',
-      icon: <ImageIcon />
-    },
+    // {
+    //   title: 'Authentication',
+    //   href: '/sign-in',
+    //   icon: <LockOpenIcon />
+    // },
+    // {
+    //   title: 'Typography',
+    //   href: '/typography',
+    //   icon: <TextFieldsIcon />
+    // },
+    // {
+    //   title: 'Icons',
+    //   href: '/icons',
+    //   icon: <ImageIcon />
+    // },
     {
       title: 'Account',
       href: '/account',
@@ -103,7 +104,7 @@ const Sidebar = props => {
           className={classes.nav}
           pages={pages}
         />
-        <UpgradePlan />
+        {/* <UpgradePlan /> */}
       </div>
     </Drawer>
   );

@@ -26,11 +26,15 @@ const Profile = props => {
 
   const classes = useStyles();
 
-  const user = {
-    name: 'Shen Zhi',
-    avatar: '/images/avatars/avatar_11.png',
-    bio: 'Brain Director'
-  };
+  const user = JSON.parse(localStorage.getItem('user'));
+  console.log('user:', user)
+  // state = {firstname: user.firstname, lastname: user.lastname}
+
+  // const user = {
+  //   name: 'Shen Zhi',
+  //   avatar: '/images/avatars/avatar_11.png',
+  //   bio: 'Brain Director'
+  // };
 
   return (
     <div
@@ -48,7 +52,7 @@ const Profile = props => {
         className={classes.name}
         variant="h4"
       >
-        {user.name}
+        <span style= {{fontSize: 15}}>{user.firstname} {user.lastname}</span>
       </Typography>
       <Typography variant="body2">{user.bio}</Typography>
     </div>

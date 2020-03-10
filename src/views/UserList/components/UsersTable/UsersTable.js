@@ -52,11 +52,12 @@ const UsersTable = props => {
 
   const handleSelectAll = event => {
     const { users } = props;
+    console.log('users from usertable', users);
 
     let selectedUsers;
 
     if (event.target.checked) {
-      selectedUsers = users.map(user => user.id);
+      selectedUsers = users.map(user => user._id);
     } else {
       selectedUsers = [];
     }
@@ -116,9 +117,7 @@ const UsersTable = props => {
                   </TableCell>
                   <TableCell>Name</TableCell>
                   <TableCell>Email</TableCell>
-                  <TableCell>Location</TableCell>
                   <TableCell>Phone</TableCell>
-                  <TableCell>Registration date</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -149,14 +148,14 @@ const UsersTable = props => {
                       </div>
                     </TableCell>
                     <TableCell>{user.email}</TableCell>
-                    <TableCell>
+                    {/* <TableCell>
                       {user.address.city}, {user.address.state},{' '}
                       {user.address.country}
-                    </TableCell>
+                    </TableCell> */}
                     <TableCell>{user.phone}</TableCell>
-                    <TableCell>
+                    {/* <TableCell>
                       {moment(user.createdAt).format('DD/MM/YYYY')}
-                    </TableCell>
+                    </TableCell> */}
                   </TableRow>
                 ))}
               </TableBody>

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import { Button } from '@material-ui/core';
+import {SignUp} from 'views';
+
 
 import { SearchInput } from 'components';
 
@@ -19,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
   importButton: {
     marginRight: theme.spacing(1)
-  },
+  }, 
   exportButton: {
     marginRight: theme.spacing(1)
   },
@@ -33,6 +35,16 @@ const UsersToolbar = props => {
 
   const classes = useStyles();
 
+  
+  // let isModalOpen= false;
+
+  // const toggle = () => {
+  //   isModalOpen = !isModalOpen;
+  //   console.log('ismodel', isModalOpen);
+  // };
+
+  
+
   return (
     <div
       {...rest}
@@ -42,10 +54,10 @@ const UsersToolbar = props => {
         <span className={classes.spacer} />
         <Button className={classes.importButton}>Import</Button>
         <Button className={classes.exportButton}>Export</Button>
-        <Button
+        <Button 
           color="primary"
           variant="contained"
-        >
+          onClick={this.SignUp}>
           Add user
         </Button>
       </div>
@@ -55,6 +67,9 @@ const UsersToolbar = props => {
           placeholder="Search user"
         />
       </div>
+      {/* <Modal isOpen={isModalOpen} onClose={toggle}>
+          <div>Hello Word</div>
+      </Modal> */}
     </div>
   );
 };

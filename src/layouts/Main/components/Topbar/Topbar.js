@@ -28,17 +28,22 @@ const Topbar = props => {
   const [notifications] = useState([]);
 
   return (
+    
     <AppBar
       {...rest}
       className={clsx(classes.root, className)}
     >
+      
       <Toolbar>
         <RouterLink to="/">
           <img
             alt="Logo"
             src="/images/logos/logo--white.svg"
           />
+          
+          
         </RouterLink>
+        
         <div className={classes.flexGrow} />
         <Hidden mdDown>
           <IconButton color="inherit">

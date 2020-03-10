@@ -12,6 +12,7 @@ import {
   Icons as IconsView,
   Account as AccountView,
   Settings as SettingsView,
+  //AddUser as SignUpView,
   SignUp as SignUpView,
   SignIn as SignInView,
   NotFound as NotFoundView
@@ -23,7 +24,7 @@ const Routes = () => {
       <Redirect
         exact
         from="/"
-        to="/dashboard"
+        to="/sign-in"
       />
       <RouteWithLayout
         component={DashboardView}
